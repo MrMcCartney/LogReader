@@ -7,6 +7,8 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import java.util.concurrent.atomic.AtomicLong;
 
+import com.securitycompany.cardswipe.core.LogList;
+
 @Path("/read-log")
 @Produces(MediaType.APPLICATION_JSON)
 public class LogReaderResource {
@@ -17,7 +19,10 @@ public class LogReaderResource {
     }
 
     @GET
-    public Saying sayHello() {
+    public LogList getLogList() {
     	    
+    	    //final String value = String.format();
+    	    
+    	    //return new LogList(counter.incrementAndGet(), value);
     }
 }
