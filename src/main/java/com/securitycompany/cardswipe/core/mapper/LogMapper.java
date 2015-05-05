@@ -10,9 +10,7 @@ import java.sql.SQLException;
 public class LogMapper implements ResultSetMapper<LogEntry> {
 	public LogEntry map(int index, ResultSet resultSet, StatementContext statementContext) throws SQLException
 	{
-        return new LogEntry()
-        	.setTime(resultSet.getLong("TIME"))
-                .setId(resultSet.getInt("ID"))
-                .setLocation(resultSet.getString("LOCATION"));
+		return new LogEntry(resultSet.getLong("TIME"),resultSet.getString("ID"),
+			resultSet.getString("LOCATION"));
         }
 }
