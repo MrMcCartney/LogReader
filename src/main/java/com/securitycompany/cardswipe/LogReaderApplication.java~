@@ -30,7 +30,7 @@ public class LogReaderApplication extends Application<LogReaderConfiguration> {
     public void run(final LogReaderConfiguration configuration, final Environment environment) 
     throws ClassNotFoundException {
     	    final DBIFactory factory = new DBIFactory();
-    	    final DBI jdbi = factory.build(environment, configuration.getDataSourceFactory(), "postgresql");
+    	    final DBI jdbi = factory.build(environment, config.getDataSourceFactory(), "postgresql");
     	    final LogDAO logDAO = jdbi.onDemand(LogDAO.class);
     	    
     	    final LogReaderResource resource = new LogReaderResource(logDAO);

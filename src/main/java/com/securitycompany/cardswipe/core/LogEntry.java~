@@ -1,20 +1,19 @@
 package com.securitycompany.cardswipe.core;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import org.hibernate.validator.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 public class LogEntry {
 	
-	@NotEmpty
+	@NotNull
 	@JsonProperty
 	private long time;
 	
-	@NotEmpty
+	@NotNull
 	@JsonProperty
 	private String id;
 	
-	@NotEmpty
+	@NotNull
 	@JsonProperty
 	private String location;
 	
@@ -38,7 +37,7 @@ public class LogEntry {
 		return location;
 	}
 	
-	public void setLocation(String location){
+	public void setId(String location){
 		this.location = location;
 	}
 }

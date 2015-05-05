@@ -11,7 +11,7 @@ public class LogMapper implements ResultSetMapper<LogEntry> {
 	public LogEntry map(int index, ResultSet resultSet, StatementContext statementContext) throws SQLException
 	{
         return new LogEntry()
-        	.setTime(resultSet.getTime("TIME"))
+        	.setTime(resultSet.getLong("TIME"))
                 .setId(resultSet.getInt("ID"))
                 .setLocation(resultSet.getString("LOCATION"));
         }
