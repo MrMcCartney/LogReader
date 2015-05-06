@@ -29,6 +29,10 @@ public class LogEntry {
 	public String getLocation() {
 		return location;
 	}
+
+	public LogEntry() {
+		// Jackson deserialization
+	}
 	
 	public LogEntry(long time,String id,String location) {
 		this.time = time;
