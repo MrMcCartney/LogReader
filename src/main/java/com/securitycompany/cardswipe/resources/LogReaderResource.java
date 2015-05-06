@@ -1,6 +1,5 @@
 package com.securitycompany.cardswipe.resources;
 
-import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;

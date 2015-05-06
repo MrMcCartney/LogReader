@@ -3,11 +3,11 @@ package com.securitycompany.cardswipe.core;
 import static io.dropwizard.testing.FixtureHelpers.fixture;
 import static org.junit.Assert.assertEquals;
 import io.dropwizard.jackson.Jackson;
-import org.junit.Test;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.junit.Test;
 
 public class LogEntryTest {
-
+    //Given
     private static final ObjectMapper MAPPER = Jackson.newObjectMapper();
 
     @Test
@@ -15,7 +15,9 @@ public class LogEntryTest {
         //When
         final LogEntry logEntry = new LogEntry(1430504951300L,"11223344","Front Desk");
         //Then
-        assertEquals(fixture("fixtures/logEntry.json"), MAPPER.writeValueAsString(logEntry));
+        String expected = fixture("fixtures/logEntry.json").replaceAll("\\s+", "");
+        String actual = MAPPER.writeValueAsString(logEntry).replaceAll("\\s+", "");
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -23,7 +25,7 @@ public class LogEntryTest {
         //When
         final LogEntry logEntry = new LogEntry(1430504951300L,"11223344","Front Desk");
         //Then
-        assertEquals(logEntry, MAPPER.readValue(fixture("fixtures/person.json"), LogEntry.class));
+        assertEquals(logEntry, MAPPER.readValue(fixture("fixtures/logEntry.json"), LogEntry.class));
     }
 
 }

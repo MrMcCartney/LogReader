@@ -1,7 +1,6 @@
 package com.securitycompany.cardswipe.core;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import org.hibernate.validator.constraints.NotEmpty;
 
 public class LogEntry {
@@ -39,6 +38,20 @@ public class LogEntry {
 		this.id = id;
 		this.location = location;
 	}
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof LogEntry)) return false;
+
+        LogEntry that = (LogEntry) o;
+
+        if (getTime() != that.getTime()) return false;
+        if (!getId().equals(that.getId())) return false;
+        if (!getLocation().equals(that.getLocation())) return false;
+
+        return true;
+    }
 	/*
 	public void setTime(long time) {
 		this.time = time;
