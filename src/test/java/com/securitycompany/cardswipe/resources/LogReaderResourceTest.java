@@ -9,10 +9,9 @@ import com.securitycompany.cardswipe.core.LogEntry;
 import io.dropwizard.testing.junit.ResourceTestRule;
 import java.util.ArrayList;
 import java.util.List;
+import javax.ws.rs.core.GenericType;
 
 import com.securitycompany.cardswipe.dao.LogDAO;
-
-import javax.ws.rs.core.GenericType;
 
 public class LogReaderResourceTest {
 
