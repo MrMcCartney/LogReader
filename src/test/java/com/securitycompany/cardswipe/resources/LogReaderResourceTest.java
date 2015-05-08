@@ -39,6 +39,5 @@ public class LogReaderResourceTest {
         assertEquals("11223366", results.get(1).getId());
         assertEquals("Front Desk", results.get(0).getLocation());
         assertEquals("Managers Office", results.get(1).getLocation());
-
     }
 }
