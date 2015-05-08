@@ -24,7 +24,7 @@ public class LogReaderResourceTest {
             .build();
 
     @Test
-    public void When_LogReaderResource_Gets_A_List_Then_The_List_Should_Not_Change() throws Exception {
+    public void When_getAll_Gets_A_List_Then_The_List_Should_Not_Change() throws Exception {
         //When
         List<LogEntry> entries = new ArrayList<>();
         entries.add(new LogEntry(1430504951300L,"11223344","Front Desk"));
