@@ -1,13 +1,13 @@
 package com.securitycompany.cardswipe;
 
 import io.dropwizard.Application;
+import io.dropwizard.java8.Java8Bundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.jdbi.DBIFactory;
 import org.skife.jdbi.v2.DBI;
 
 import com.securitycompany.cardswipe.resources.LogReaderResource;
-import com.securitycompany.cardswipe.core.LogEntry;
 import com.securitycompany.cardswipe.dao.LogDAO;
 
 public class LogReaderApplication extends Application<LogReaderConfiguration> {
@@ -23,7 +23,7 @@ public class LogReaderApplication extends Application<LogReaderConfiguration> {
 
     @Override
     public void initialize(final Bootstrap<LogReaderConfiguration> bootstrap) {
-        // TODO: application initialization
+        bootstrap.addBundle(new Java8Bundle());
     }
 
     @Override
