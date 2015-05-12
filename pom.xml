@@ -30,9 +30,9 @@
             <version>${dropwizard.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.dropwizard</groupId>
-            <artifactId>dropwizard-jdbi</artifactId>
-            <version>${dropwizard.version}</version>
+            <groupId>io.dropwizard.modules</groupId>
+            <artifactId>dropwizard-java8-jdbi</artifactId>
+            <version>0.8.0-2</version>
         </dependency>
         <dependency>
             <groupId>io.dropwizard</groupId>
