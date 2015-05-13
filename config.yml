@@ -6,10 +6,10 @@ database:
   user: postgres
 
   # the password
-  password: dnahwols
+  password: bluemoon
 
   # the JDBC URL
-  url: jdbc:postgresql://localhost/cardswipelog
+  url: jdbc:postgresql://dev2.hoegg.software/cardswipelog
 
   # any properties specific to your JDBC driver:
   properties:
