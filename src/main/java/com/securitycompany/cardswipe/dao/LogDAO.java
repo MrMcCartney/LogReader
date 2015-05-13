@@ -1,9 +1,7 @@
 package com.securitycompany.cardswipe.dao;
 
 import org.skife.jdbi.v2.sqlobject.Bind;
-import org.skife.jdbi.v2.sqlobject.BindBean;
 import org.skife.jdbi.v2.sqlobject.SqlQuery;
-import org.skife.jdbi.v2.sqlobject.SqlUpdate;
 import org.skife.jdbi.v2.sqlobject.customizers.RegisterMapper;
 
 import java.util.List;
@@ -15,4 +13,7 @@ import com.securitycompany.cardswipe.core.mapper.LogMapper;
 public interface LogDAO {
 	@SqlQuery("SELECT * FROM ACCESS_LOG")
 	List<LogEntry> getAll();
+
+	@SqlQuery("SELECT * FROM ACCESS_LOG WHERE TIME > :time")
+	List<LogEntry> getFrom(@Bind("time") long time);
 }
