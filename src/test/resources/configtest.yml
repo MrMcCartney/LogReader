@@ -1,15 +1,15 @@
 database:
-  # the name of your JDBC driver
-  driverClass: org.postgresql.Driver
+  # the name of your H2 driver
+  driverClass: org.h2.Driver
 
   # the username
-  user: postgres
+  user:
 
   # the password
-  password: bluemoon
+  password:
 
   # the JDBC URL
-  url: jdbc:postgresql://dev2.hoegg.software/cardswipelog
+  url: jdbc:h2:mem:cardswipelog;MODE=PostgreSQL;INIT=RUNSCRIPT FROM 'classpath:db/cardswipe.ddl'
 
   # any properties specific to your JDBC driver:
   properties:
