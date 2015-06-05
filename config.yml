@@ -9,7 +9,7 @@ database:
   password: bluemoon
 
   # the JDBC URL
-  url: jdbc:postgresql://dev1.hoegg.software/cardswipelog
+  url: jdbc:postgresql://dev-banksecurity-2.hoegg.software/cardswipelog
 
   # any properties specific to your JDBC driver:
   properties:
